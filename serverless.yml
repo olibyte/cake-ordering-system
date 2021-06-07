@@ -7,5 +7,10 @@ provider:
   lambdaHashingVersion: 20201221
 
 functions:
-  hello:
-    handler: handler.hello
+  createOrder:
+    handler: handler.createOrder
+    events:
+      - http:
+          path: /order
+          method: post
+          
