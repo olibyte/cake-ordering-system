@@ -13,4 +13,12 @@ functions:
       - http:
           path: /order
           method: post
-          
+
+resources:
+  Resources:
+    orderEventsStrem:
+      Type: AWS::Kinesis::Stream
+      Properties:
+        Name: order-events
+        ShardCount: 1
+
