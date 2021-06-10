@@ -13,6 +13,8 @@ functions:
       - http:
           path: /order
           method: post
+    environment:
+      orderTableName: ordersTable
 
 resources:
   Resources:
@@ -21,4 +23,15 @@ resources:
       Properties:
         Name: order-events
         ShardCount: 1
+      orderTable:
+        Type: AWS::DynamoDB::Table
+        Properties:
+          TableName: ordersTable
+          AttributeDefinitions:
+            - AttributeName: "orderId"
+              AttributeType: "S"
+          KeySchema:
+            - AttributeName: "orderId"
+              KeyType: "HASH"
+          BillingMode: PAY_PER_REQUEST
 
