@@ -15,6 +15,7 @@ functions:
           method: post
     environment:
       orderTableName: ordersTable
+      orderStreamName: order-events
 
 resources:
   Resources:
