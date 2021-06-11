@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "serverless-pseudo-parameters": "^2.5.0",
-    "uuid": "^8.3.2"
+    "serverless-pseudo-parameters": "^2.4.0",
+    "uuid": "^3.3.2"
   }
 }
